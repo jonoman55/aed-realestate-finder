@@ -57,8 +57,7 @@ export async function getServerSideProps({ query }) {
   const locationExternalIDs = query.locationExternalIDs || '5002';
   const categoryExternalID = query.categoryExternalID || '4';
 
-  const data = await fetchApi(
-    `${baseUrl}/properties/list?locationExternalIDs=${locationExternalIDs}
+  const data = await fetchApi(`${baseUrl}/properties/list?locationExternalIDs=${locationExternalIDs}
     &purpose=${purpose}&categoryExternalID=${categoryExternalID}
     &bathsMin=${bathsMin}&rentFrequency=${rentFrequency}&priceMin=${minPrice}
     &priceMax=${maxPrice}&roomsMin=${roomsMin}&sort=${sort}&areaMax=${areaMax}`

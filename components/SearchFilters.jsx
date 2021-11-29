@@ -19,13 +19,11 @@ export default function SearchFilters() {
     const path = router.pathname;
     const { query } = router;
     const values = getFilterValues(filterValues);
-
     values.forEach((item) => {
       if (item.value && filterValues?.[item.name]) {
         query[item.name] = item.value;
       }
     });
-
     router.push({ pathname: path, query: query });
   };
 
@@ -37,7 +35,6 @@ export default function SearchFilters() {
         setLoading(false);
         setLocationData(data?.hits);
       };
-
       fetchData();
     }
   }, [searchTerm]);

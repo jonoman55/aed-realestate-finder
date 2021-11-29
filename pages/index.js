@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Flex, Box, Text, Button } from "@chakra-ui/react";
-import { baseUrl, fetchApi } from "../utils/fetchApi";
 import Property from "../components/Property";
+import { baseUrl, fetchApi } from "../utils/fetchApi";
 
 export const Banner = ({ purpose, title1, title2, desc1, desc2, buttonText, linkName, imageUrl }) => (
   <Flex flexWrap="wrap" justifyContent="center" alignItems="center" m="10">
@@ -24,7 +24,7 @@ const Home = ({ propertiesForSale, propertiesForRent }) => (
       purpose="RENT A HOME"
       title1="Rental Homes for"
       title2="Everyone"
-      desc1="Explore Apartments, villas"
+      desc1="Explore apartments, villas"
       desc2="and more"
       buttonText="Explore Renting"
       linkName="/search?purpose=for-rent"
@@ -37,7 +37,7 @@ const Home = ({ propertiesForSale, propertiesForRent }) => (
       purpose="BUY A HOME"
       title1="Find, Buy & Own Your"
       title2="Dream Home"
-      desc1="Explore Homes, villas"
+      desc1="Explore homes, villas"
       desc2="and more"
       buttonText="Explore Buying"
       linkName="/search?purpose=for-sale"
