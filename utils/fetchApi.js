@@ -1,6 +1,5 @@
 import axios from "axios";
 
-// TODO : replace with variables from .env file
 export const baseUrl = `https://${process.env.NEXT_PUBLIC_API_HOST}`;
 
 export const fetchApi = async (url) => {
